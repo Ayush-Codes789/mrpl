@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+/* 1. Sovereign Enterprise Workbench Theme Tokens */
+@theme {
+  --color-wb-canvas: #08090A;
+  --color-wb-panel: #0D0F12;
+  --color-wb-card: #121417;
+  --color-wb-border: #1E222A;
+  
+  --color-wb-emerald: #10B981;
+  --color-wb-teal: #34D399;
+  
+  --color-wb-sub-400: #94A3B8;
+  --color-wb-sub-500: #64748B;
+}
+
+/* 2. Custom Utility Animations */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
